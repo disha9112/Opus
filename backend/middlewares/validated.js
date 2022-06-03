@@ -20,7 +20,7 @@ const isValidated = async (req, res, next) => {
     if (!userExists) {
       return res.status(400).send({
         status: false,
-        message: "Doctor does not exist in database",
+        message: "User does not exist in database",
       });
     } else {
       console.log(userExists);
