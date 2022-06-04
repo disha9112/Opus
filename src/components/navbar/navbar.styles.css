@@ -1,0 +1,95 @@
+nav {
+  padding: 0;
+  box-sizing: border-box;
+  height: auto;
+  width: 100%;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  /* background-color: #00575c; */
+  position: fixed;
+  top: 0;
+}
+
+.nav-header {
+  display: inline;
+}
+
+.nav-title {
+  display: inline-block;
+  font-size: 25px;
+  font-weight: 900;
+  color: #00575c;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav-btn {
+  display: none;
+}
+
+.nav-links {
+  display: inline;
+  float: right;
+  font-size: 20px;
+}
+
+li {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #00575c;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+#nav-check {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  label:hover {
+    cursor: pointer;
+  }
+  span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #00575c;
+  }
+  .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+    overflow: hidden;
+  }
+  li {
+    display: block;
+    width: 100%;
+  }
+  #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: hidden;
+  }
+}
