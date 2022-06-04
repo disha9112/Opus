@@ -15,7 +15,6 @@ const Navbar = () => {
           <span></span>
         </label>
       </div>
-
       <div className="nav-links">
         <li>Login</li>
         <li>Contact Us</li>
