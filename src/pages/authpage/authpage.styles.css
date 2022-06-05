@@ -1,7 +1,7 @@
 .container-auth {
   text-align: center;
   padding: 20px;
-  margin-top: 100px;
+  margin-top: 70px;
   box-sizing: border-box;
   background-color: #ffffff;
   display: grid;
@@ -13,11 +13,13 @@
   font-weight: 900;
 }
 
-.signup .title {
+.signup .title,
+.login .title {
   color: #5aba89;
 }
 
-.signup p {
+.signup .p,
+.login .p {
   color: #5aba89;
 }
 
@@ -26,11 +28,11 @@
   padding: 20px;
 }
 
-.login {
+/* .login {
   color: white;
   background: #5aba89;
   border-radius: 20px;
-}
+} */
 
 p {
   font-size: 1.5em;
@@ -40,7 +42,7 @@ input {
   font-size: 1.2em;
   width: 75%;
   padding: 8px;
-  margin: 8px 0px;
+  margin: 18px 0px;
   border: 1px solid #dddddd;
 }
 
