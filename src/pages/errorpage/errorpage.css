@@ -1,0 +1,29 @@
+.container-error {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 30px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.tagline-error {
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 2.9em;
+  padding: 1em;
+}
+
+.get-started {
+  font-size: 1em;
+}
+
+@media all and (max-width: 1110px) {
+  .container-error {
+    display: grid;
+    justify-items: center;
+  }
+
+  .tagline-error {
+    font-size: 1.5em;
+  }
+}
