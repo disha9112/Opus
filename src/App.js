@@ -1,12 +1,12 @@
 import "./App.css";
-import Authpage from "./pages/authpage/authpage.component";
-import Homepage from "./pages/homepage/homepage.component";
+import Authpage from "./pages/authpage/authpage";
+import Homepage from "./pages/homepage/homepage";
 
 function App() {
   return (
     <div>
-      {/* <Authpage /> */}
-      <Homepage />
+      <Authpage />
+      {/* <Homepage /> */}
     </div>
   );
 }

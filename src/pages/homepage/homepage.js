@@ -3,9 +3,10 @@ import image from "../../assets/homepage.png";
 import clock from "../../assets/clock.png";
 import list from "../../assets/list.png";
 import quote from "../../assets/quote.png";
-import "./homepage.styles.css";
+import "./homepage.css";
 import Navbar from "../../components/navbar/navbar.component";
 import Footer from "../../components/footer/footer.component";
+import Button from "../../components/button/button.component";
 
 const Homepage = () => {
   return (
@@ -14,7 +15,7 @@ const Homepage = () => {
       <div className="container">
         <div className="tagline">
           <div>Bring to life your ideas, and enhance your work efficiency.</div>
-          <button className="get-started">Get started today.</button>
+          <Button getStarted>Get started today.</Button>
         </div>
         <div className="content">
           <img src={image} width="600px" />

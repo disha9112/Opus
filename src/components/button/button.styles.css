@@ -1,0 +1,59 @@
+.get-started {
+  font-weight: 900;
+  display: inline-block;
+  padding: 0.2em;
+  border: none;
+  margin-top: 10px;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  background: #5aba89;
+  color: #ffffff;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.get-started:hover {
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #00575c;
+}
+
+@media all and (max-width: 509px) {
+  .get-started {
+    display: block;
+    margin: 0.4em auto;
+    font-size: 1.5em;
+  }
+}
+
+.auth-submit {
+  font-size: 1.2em;
+  font-weight: 900;
+  padding: 10px;
+  margin-top: 20px;
+  text-align: center;
+  width: 50%;
+  background-color: #00575c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.auth-submit:hover {
+  cursor: pointer;
+  color: white;
+  background: #5aba89;
+}
+
+@media all and (max-width: 450px) {
+  .auth-submit {
+    text-align: center;
+    width: 75%;
+    background-color: #00575c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+}

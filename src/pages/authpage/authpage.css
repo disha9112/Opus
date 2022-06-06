@@ -28,12 +28,6 @@
   padding: 20px;
 }
 
-/* .login {
-  color: white;
-  background: #5aba89;
-  border-radius: 20px;
-} */
-
 p {
   font-size: 1.5em;
 }
@@ -48,16 +42,6 @@ input {
 
 input:focus {
   outline: none;
-}
-
-input[type="submit"] {
-  text-align: center;
-  width: 50%;
-  background-color: #00575c;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
 }
 
 @media all and (max-width: 750px) {
@@ -88,15 +72,5 @@ input[type="submit"] {
     padding: 8px;
     margin: 8px 0px;
     border: 1px solid #dddddd;
-  }
-
-  input[type="submit"] {
-    text-align: center;
-    width: 75%;
-    background-color: #00575c;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
   }
 }

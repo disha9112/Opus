@@ -2,11 +2,10 @@ const express = require("express");
 const User = require("../../models/userModel");
 
 exports.login = async (req, res) => {
-  const name = req.body.name;
   const password = req.body.password;
   const email = req.body.email;
 
-  if (!name || !password || !email) {
+  if (!password || !email) {
     return res.status(400).send({
       status: false,
       message: "Fields cannot be empty",
@@ -22,16 +21,8 @@ exports.login = async (req, res) => {
     });
   }
 
-  const nameRegex = /^[a-zA-Z\-]+$/;
   const emailRegex =
     /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-
-  if (!nameRegex.test(name)) {
-    return res.status(400).send({
-      status: false,
-      message: "Please provide the name in correct format",
-    });
-  }
 
   if (!emailRegex.test(email)) {
     return res.status(400).send({

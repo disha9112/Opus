@@ -11,23 +11,6 @@
 
 .get-started {
   font-size: 1em;
-  font-weight: 900;
-  display: inline-block;
-  padding: 0.2em;
-  border: none;
-  margin-top: 10px;
-  border-radius: 0.12em;
-  box-sizing: border-box;
-  background: #5aba89;
-  color: #ffffff;
-  text-align: center;
-  transition: all 0.2s;
-}
-
-.get-started:hover {
-  cursor: pointer;
-  color: #ffffff;
-  background-color: #00575c;
 }
 
 .content {
