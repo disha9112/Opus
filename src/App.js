@@ -15,14 +15,15 @@ function App() {
     // <Note />
     // <NoteList />
     // <NoteForm />
-    <Notespage />
-    // <Router>
-    //   <Routes>
-    //     <Route path="/" element={<Homepage />} />
-    //     <Route path="/auth" element={<Authpage />} />
-    //     <Route path="*" element={<Errorpage />} />
-    //   </Routes>
-    // </Router>
+    // <Notespage />
+    <Router>
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/auth" element={<Authpage />} />
+        <Route path="/notes" element={<Notespage />} />
+        <Route path="*" element={<Errorpage />} />
+      </Routes>
+    </Router>
   );
 }
 
