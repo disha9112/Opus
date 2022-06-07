@@ -1,0 +1,30 @@
+.note-form-container {
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.note-form-container input,
+.note-form-container textarea {
+  font-size: 1.2em;
+  width: 75%;
+  padding: 8px;
+  margin: 18px 0px;
+  border: 1px solid #dddddd;
+}
+
+.note-form-container input:focus,
+.note-form-container textarea:focus {
+  outline: none;
+}
+
+@media all and (max-width: 450px) {
+  .note-form-container input,
+  .note-form-container textarea {
+    font-size: 1.2em;
+    width: 90%;
+    padding: 8px;
+    margin: 8px 0px;
+    border: 1px solid #dddddd;
+  }
+}

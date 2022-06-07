@@ -4,10 +4,18 @@ import Authpage from "./pages/authpage/authpage";
 import Errorpage from "./pages/errorpage/errorpage";
 import Homepage from "./pages/homepage/homepage";
 import QuoteBlock from "./components/quote/quote.component";
+import Note from "./components/note/note.component";
+import NoteList from "./components/note-list/note-list.component";
+import NoteForm from "./components/note-form/note-form.component";
+import Notespage from "./pages/notespage/notespage";
 
 function App() {
   return (
-    <QuoteBlock />
+    // <QuoteBlock />
+    // <Note />
+    // <NoteList />
+    // <NoteForm />
+    <Notespage />
     // <Router>
     //   <Routes>
     //     <Route path="/" element={<Homepage />} />

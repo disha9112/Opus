@@ -18,9 +18,9 @@
   color: #5aba89;
 }
 
-.signup .p,
-.login .p {
-  color: #5aba89;
+.signup p,
+.login p {
+  font-size: 1.5em;
 }
 
 .signup,
@@ -28,11 +28,8 @@
   padding: 20px;
 }
 
-p {
-  font-size: 1.5em;
-}
-
-input {
+.signup input,
+.login input {
   font-size: 1.2em;
   width: 75%;
   padding: 8px;
@@ -40,7 +37,8 @@ input {
   border: 1px solid #dddddd;
 }
 
-input:focus {
+.signup input:focus,
+.login input:focus {
   outline: none;
 }
 
@@ -66,7 +64,8 @@ input:focus {
     font-weight: 900;
   }
 
-  input {
+  .signup input,
+  .login input {
     font-size: 1.2em;
     width: 90%;
     padding: 8px;

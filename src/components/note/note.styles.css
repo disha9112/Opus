@@ -1,0 +1,55 @@
+.note-container {
+  padding: 20px;
+}
+
+.main-note-container {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #e1f396;
+}
+
+.main-note-container:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+  transition: 0.2s;
+}
+
+.note-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.note-date {
+  font-size: 1.3em;
+}
+
+.note-footer {
+  margin: 10px 0;
+}
+
+.note-title,
+.note-description {
+  margin: 20px 0;
+}
+
+.note-title {
+  font-size: 2em;
+  font-weight: 900;
+}
+
+.note-description {
+  font-size: 1.7em;
+}
+
+.btn-trash,
+.btn-edit {
+  margin: 0px 10px;
+}
+
+.btn-trash:hover {
+  color: red;
+}
+
+.btn-edit:hover {
+  color: #5aba89;
+}
