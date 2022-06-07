@@ -10,6 +10,10 @@
   background: #ededed;
 }
 
+.quote-author {
+  font-weight: 900;
+}
+
 .quote-container::before {
   content: "\201C";
   color: #78c0a8;
