@@ -5,6 +5,10 @@ import Navbar from "../../components/navbar/navbar.component";
 import "./authpage.css";
 
 const Authpage = () => {
+  const nameRegex = /^[a-zA-Z\-]+$/;
+  const emailRegex =
+    /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -29,24 +33,32 @@ const Authpage = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const user = {
-      name: name,
-      email: email,
-      password: password,
-      phoneNumber: phone,
-    };
+    if (!nameRegex.test(name)) {
+      alert("Please enter a valid name");
+    } else if (!emailRegex.test(name)) {
+      alert("Please enter a valid email address");
+    } else if (password.length <= 5) {
+      alert("Please enter a strong password with more than 5 characters");
+    } else {
+      const user = {
+        name: name,
+        email: email,
+        password: password,
+        phoneNumber: phone,
+      };
 
-    // console.log(user);
+      // console.log(user);
 
-    axios
-      .post("http://localhost:8000/auth/signup", user)
-      .then((res) => console.log(res.data))
-      .catch((error) => console.log("Error: ", error));
+      axios
+        .post("http://localhost:8000/auth/signup", user)
+        .then((res) => console.log(res.data))
+        .catch((error) => console.log("Error: ", error));
 
-    setName("");
-    setEmail("");
-    setPassword("");
-    setPhone("");
+      setName("");
+      setEmail("");
+      setPassword("");
+      setPhone("");
+    }
   };
 
   return (
