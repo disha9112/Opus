@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./navbar.styles.css";
 
 const Navbar = () => {
@@ -6,7 +7,9 @@ const Navbar = () => {
     <nav>
       <input type="checkbox" id="nav-check"></input>
       <div className="nav-header">
-        <div className="nav-title">Opus</div>
+        <Link to="/">
+          <div className="nav-title">Opus</div>
+        </Link>
       </div>
       <div className="nav-btn">
         <label htmlFor="nav-check">
@@ -16,8 +19,12 @@ const Navbar = () => {
         </label>
       </div>
       <div className="nav-links">
-        <li>Login</li>
-        <li>Contact Us</li>
+        <Link to="/auth">
+          <li>Login</li>
+        </Link>
+        <Link to="/contact">
+          <li>Contact Us</li>
+        </Link>
       </div>
     </nav>
   );

@@ -6,9 +6,8 @@ const QuoteBlock = () => {
   const [title, setTitle] = useState([]);
   const [author, setAuthor] = useState([]);
 
-  const randomNumber = Math.floor(Math.random() * 1643 + 1);
-
   useEffect(() => {
+    const randomNumber = Math.floor(Math.random() * 1643 + 1);
     fetch("https://type.fit/api/quotes")
       .then((response) => response.json())
       .then((str) => {
