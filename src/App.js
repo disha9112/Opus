@@ -9,7 +9,6 @@ import Timerpage from "./pages/timerpage/timerpage";
 
 function App() {
   return (
-    // <ProfileCard />
     <Router>
       <Routes>
         <Route path="/" element={<Homepage />} />

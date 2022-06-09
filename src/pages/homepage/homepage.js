@@ -51,7 +51,7 @@ const Homepage = () => {
             <div className="content-3">
               <img src={quote} alt="double quote icon" width="90px" />
               <p className="why-us-para">
-                Inspiring quotes which enhance your motivation and confidence
+                Inspiring quotes which enhance your positivity and confidence
               </p>
             </div>
           </div>

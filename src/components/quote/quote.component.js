@@ -17,7 +17,7 @@ const QuoteBlock = () => {
   }, []);
 
   if (!title.length) {
-    return <h2>Loading...</h2>;
+    return <div className="quote-loading">Loading...</div>;
   } else {
     return (
       <div>
