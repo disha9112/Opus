@@ -5,8 +5,11 @@ import Navbar from "../../components/navbar/navbar.component";
 import "./authpage.css";
 
 const Authpage = () => {
-  const nameRegex = /^[a-zA-Z\-]+$/;
+  const nameRegex =
+    // eslint-disable-next-line
+    /^[a-zA-Z\-]+$/;
   const emailRegex =
+    // eslint-disable-next-line
     /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
   const [name, setName] = useState("");

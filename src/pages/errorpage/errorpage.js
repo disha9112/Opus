@@ -13,7 +13,7 @@ const Errorpage = () => {
           <div>
             Whoops! The page you're looking for isn't available. <br />
             <br />
-            But that doesn't put a full stop to your work!
+            Luckily, that doesn't put a full stop to your work!
           </div>
           <Link to="/">
             <Button getStarted>Back to Home</Button>

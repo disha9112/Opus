@@ -1,0 +1,8 @@
+.play-btn {
+  color: #5aba89;
+}
+
+.play-btn:hover {
+  cursor: pointer;
+  color: #e1f396;
+}

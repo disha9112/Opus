@@ -1,0 +1,8 @@
+.pause-btn {
+  color: #5aba89;
+}
+
+.pause-btn:hover {
+  cursor: pointer;
+  color: #e1f396;
+}

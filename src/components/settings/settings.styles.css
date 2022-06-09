@@ -1,0 +1,43 @@
+.settings-container {
+  text-align: center;
+  display: grid;
+  place-items: center;
+}
+
+.settings-work,
+.settings-break {
+  font-size: 2em;
+  margin: 20px;
+}
+
+.work-slider {
+  margin-bottom: 20px;
+  width: 50%;
+  height: 40px;
+  border: 3px solid #5aba89;
+  border-radius: 50px;
+}
+
+.thumb {
+  background: #5aba89;
+  cursor: pointer;
+  border-radius: 100px;
+  width: 40px;
+  height: 40px;
+}
+
+.thumb:focus {
+  border: none;
+  outline: none;
+}
+
+@media all and (max-width: 415px) {
+  .work-slider {
+    height: 20px;
+  }
+
+  .thumb {
+    width: 20px;
+    height: 20px;
+  }
+}
