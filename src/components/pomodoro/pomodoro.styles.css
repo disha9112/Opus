@@ -3,16 +3,16 @@
 }
 
 .pomodoro-timer {
-  max-width: 33%;
+  max-width: 30%;
   margin: 0 auto;
 }
 
 .pomodoro-buttons {
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 @media all and (max-width: 1000px) {
   .pomodoro-timer {
-    max-width: 70%;
+    max-width: 50%;
   }
 }

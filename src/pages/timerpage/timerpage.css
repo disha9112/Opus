@@ -4,3 +4,12 @@
   padding: 20px;
   font-size: 2em;
 }
+
+@media all and (max-width: 400px) {
+  .timerpage-content {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 1.5em;
+  }
+}

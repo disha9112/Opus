@@ -20,13 +20,17 @@ const Timerpage = () => {
         }}
       >
         <Navbar />
-        <div className="timerpage-content">
-          Make use of the age-old Pomodoro Timer technique to efficiently manage
-          and finish your tasks, by breaking them down into short intervals of
-          time.
+        <div className="timerpage">
+          <div className="timerpage-content">
+            Make use of the age-old Pomodoro Timer technique to efficiently
+            manage and finish your tasks, by breaking them down into short
+            intervals of time.
+          </div>
+          <div className="timerpage-main">
+            <Pomodoro />
+            <Settings />
+          </div>
         </div>
-        <Pomodoro />
-        <Settings />
       </SettingsContext.Provider>
     </div>
   );
