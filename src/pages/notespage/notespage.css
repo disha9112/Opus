@@ -1,12 +1,7 @@
 .main-notespage-container {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
-}
-
-.notespage-title {
   margin-top: 60px;
-  text-align: center;
-  font-size: 3em;
 }
 
 @media all and (max-width: 509px) {

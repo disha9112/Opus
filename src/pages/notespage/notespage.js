@@ -8,7 +8,6 @@ const Notespage = () => {
   return (
     <div>
       <Navbar />
-      <div className="notespage-title">Welcome, user!</div>
       <div className="main-notespage-container">
         <NoteForm />
         <NoteList />
