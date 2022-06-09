@@ -19,10 +19,8 @@
 
 .footer-links {
   color: #ffffff;
-  margin: 0 0 10px;
   padding: 0;
   display: inline-block;
-  line-height: 1.8;
   text-decoration: none;
   color: inherit;
 }
@@ -55,7 +53,7 @@
   color: #ffffff;
 }
 
-.footer-right a {
+.footer-right .footer-links {
   text-decoration: none;
   font-size: 25px;
   color: #00575c;

@@ -15,7 +15,7 @@ const Errorpage = () => {
             <br />
             Luckily, that doesn't put a full stop to your work!
           </div>
-          <Link to="/">
+          <Link className="btn-link" to="/">
             <Button getStarted>Back to Home</Button>
           </Link>
         </div>

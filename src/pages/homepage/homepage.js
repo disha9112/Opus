@@ -16,7 +16,7 @@ const Homepage = () => {
       <div className="container">
         <div className="tagline">
           <div>Bring to life your ideas, and enhance your work efficiency.</div>
-          <Link to="/auth">
+          <Link className="btn-link" to="/auth">
             <Button getStarted>Get started today.</Button>
           </Link>
         </div>
@@ -39,7 +39,7 @@ const Homepage = () => {
             <div className="content-1">
               <img src={clock} alt="clock icon" width="90px" />
               <p className="why-us-para">
-                Timer and trackers to keep tabs on your productivity
+                Pomodoro timer to keep tabs on your productivity
               </p>
             </div>
             <div className="content-2">

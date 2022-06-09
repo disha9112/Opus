@@ -16,7 +16,7 @@ const Footer = () => {
 
           <div className="footer-icons">
             <a href="https://github.com/">
-              <FaGithub href="https://www.linkedin.com/in/disha9112/" />
+              <FaGithub />
             </a>
             <a href="https://www.linkedin.com/in/disha9112/">
               <FaLinkedinIn />
@@ -28,17 +28,14 @@ const Footer = () => {
         </div>
 
         <div className="footer-right">
-          <Link to="/">
-            <a>Home</a>
+          <Link className="footer-links" to="/">
+            Home
           </Link>
-          <Link to="/blog">
-            <a>Blog</a>
+          <Link className="footer-links" to="/auth">
+            Login
           </Link>
-          <Link to="/auth">
-            <a>Login</a>
-          </Link>
-          <Link to="/contact">
-            <a>Contact</a>
+          <Link className="footer-links" to="/contact">
+            Contact
           </Link>
         </div>
       </footer>
