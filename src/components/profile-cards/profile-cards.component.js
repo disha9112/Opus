@@ -10,19 +10,19 @@ const ProfileCards = () => {
   return (
     <div className="cards-list">
       <div className="card pomodoro">
-        <img src={pomodoro} />
+        <img src={pomodoro} alt="pomodoro card" />
         <Link to="/pomodoro">
           <Button authSubmit>Pomodoro</Button>
         </Link>
       </div>
       <div className="card notes">
-        <img src={notes} />
+        <img src={notes} alt="notes card" />
         <Link to="/notes">
           <Button authSubmit>Notes</Button>
         </Link>
       </div>
       <div className="card todos">
-        <img src={todos} />
+        <img src={todos} alt="todos card" />
         <Link to="/todos">
           <Button authSubmit>Todos</Button>
         </Link>

@@ -5,6 +5,7 @@ import Profilepage from "./pages/profilepage/profilepage";
 import Errorpage from "./pages/errorpage/errorpage";
 import Homepage from "./pages/homepage/homepage";
 import Notespage from "./pages/notespage/notespage";
+import Todospage from "./pages/todospage/todospage";
 import Timerpage from "./pages/timerpage/timerpage";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/profile" element={<Profilepage />} />
         <Route path="/pomodoro" element={<Timerpage />} />
         <Route path="/notes" element={<Notespage />} />
+        <Route path="/todos" element={<Todospage />} />
         <Route path="*" element={<Errorpage />} />
       </Routes>
     </Router>

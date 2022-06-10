@@ -1,0 +1,41 @@
+.container-todoform {
+  display: flex;
+  justify-content: center;
+}
+
+.todo-image {
+  width: 300px;
+}
+
+.plus-icon {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.plus-icon:hover {
+  cursor: pointer;
+  color: #5aba89;
+}
+
+.container-todoform input {
+  font-size: 0.5em;
+  width: 50%;
+  padding: 8px;
+  margin: 18px 10px;
+  border: 1px solid #dddddd;
+}
+
+.container-todoform input:focus {
+  outline: none;
+}
+
+@media all and (max-width: 450px) {
+  .container-todoform input,
+  .container-todoform input {
+    font-size: 0.5em;
+    width: 50%;
+    padding: 8px;
+    margin: 8px 0px;
+    border: 1px solid #dddddd;
+  }
+}

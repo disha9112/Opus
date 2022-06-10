@@ -1,0 +1,28 @@
+.container-todo {
+  display: flex;
+  justify-content: space-between;
+  background: #5aba89;
+  width: 50%;
+  margin: 20px 0;
+  padding: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+
+.todo-content {
+  font-size: 0.65em;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.todo-buttons .btn-trash:hover {
+  cursor: pointer;
+  color: red;
+}
+
+@media all and (max-width: 450px) {
+  .todo-content {
+    font-size: 0.5em;
+  }
+}
