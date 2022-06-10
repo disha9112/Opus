@@ -23,8 +23,9 @@ const Timerpage = () => {
         <div className="timerpage">
           <div className="timerpage-content">
             Make use of the age-old Pomodoro Timer technique to efficiently
-            manage and finish your tasks, by breaking them down into short
-            intervals of time.
+            manage your tasks, by breaking them down into short intervals of
+            time.
+            <br /> Scroll down to tweak the settings as per your convenience.
           </div>
           <div className="timerpage-main">
             <Pomodoro />

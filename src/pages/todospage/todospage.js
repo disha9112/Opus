@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Navbar from "../../components/navbar/navbar.component";
 import TodoForm from "../../components/todo-form/todo-form.component";
 import Todo from "../../components/todo/todo.component";
