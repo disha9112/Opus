@@ -8,7 +8,7 @@ function Profilepage() {
   return (
     <div>
       <Navbar />
-      <div className="profilepage-title">Welcome, user!</div>
+      <div className="profilepage-title">Welcome</div>
       <QuoteBlock />
       <ProfileCards />
     </div>

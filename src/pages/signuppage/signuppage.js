@@ -1,20 +1,15 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "../../components/button/button.component";
 import Navbar from "../../components/navbar/navbar.component";
 import "./signuppage.css";
 
-const Signuppage = () => {
-  const nameRegex =
-    // eslint-disable-next-line
-    /^[a-zA-Z\-]+$/;
-  const emailRegex =
-    // eslint-disable-next-line
-    /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+function Signuppage() {
+  const navigate = useNavigate();
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [phone, setPhone] = useState("");
 
   const handleNameChange = (event) => {
     setName(event.target.value);
@@ -28,40 +23,31 @@ const Signuppage = () => {
     setPassword(event.target.value);
   };
 
-  const handlePhoneChange = (event) => {
-    setPhone(event.target.value);
-  };
-
-  const handleSubmit = (event) => {
+  async function signUpUser(event) {
     event.preventDefault();
 
-    if (!nameRegex.test(name)) {
-      alert("Please enter a valid name");
-    } else if (!emailRegex.test(name)) {
-      alert("Please enter a valid email address");
-    } else if (password.length <= 5) {
-      alert("Please enter a strong password with more than 5 characters");
+    const response = await fetch("http://localhost:8000/auth/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        password,
+      }),
+    });
+
+    const data = await response.json();
+
+    if (data.token) {
+      localStorage.setItem("token", data.token);
+      // window.location.href = "/profile";
+      navigate("/profile");
     } else {
-      const user = {
-        name: name,
-        email: email,
-        password: password,
-        phoneNumber: phone,
-      };
-
-      // console.log(user);
-
-      //   axios
-      //     .post("http://localhost:8000/auth/signup", user)
-      //     .then((res) => console.log(res.data))
-      //     .catch((error) => console.log("Error: ", error));
-
-      setName("");
-      setEmail("");
-      setPassword("");
-      setPhone("");
+      alert("Please check the data you've entered");
     }
-  };
+  }
 
   return (
     <div>
@@ -70,7 +56,7 @@ const Signuppage = () => {
         <div className="signup">
           <div className="title">New to Opus?</div>
           <p>Sign up and unlock the magic!</p>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={signUpUser}>
             <input
               type="text"
               placeholder="Name"
@@ -92,19 +78,12 @@ const Signuppage = () => {
               value={password}
               onChange={handlePasswordChange}
             />
-            <input
-              type="tel"
-              placeholder="Phone No."
-              required
-              value={phone}
-              onChange={handlePhoneChange}
-            />
             <Button authSubmit>Sign Up</Button>
           </form>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default Signuppage;
