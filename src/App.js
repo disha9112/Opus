@@ -1,6 +1,7 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Authpage from "./pages/authpage/authpage";
+import Signuppage from "./pages/signuppage/signuppage";
+import Loginpage from "./pages/loginpage/loginpage";
 import Profilepage from "./pages/profilepage/profilepage";
 import Errorpage from "./pages/errorpage/errorpage";
 import Homepage from "./pages/homepage/homepage";
@@ -13,7 +14,8 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/auth" element={<Authpage />} />
+        <Route path="/signup" element={<Signuppage />} />
+        <Route path="/login" element={<Loginpage />} />
         <Route path="/profile" element={<Profilepage />} />
         <Route path="/pomodoro" element={<Timerpage />} />
         <Route path="/notes" element={<Notespage />} />

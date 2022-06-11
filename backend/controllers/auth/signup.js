@@ -10,54 +10,42 @@ exports.signup = async (req, res) => {
   const phoneNumber = req.body.phoneNumber;
   const email = req.body.email;
 
-  const nameRegex = /^[a-zA-Z\-]+$/;
-  const emailRegex =
-    /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+  try {
+    const userExists = await User.findOne({ email: email });
 
-  if (!name || !password || !phoneNumber || !email) {
-    return res.status(400).send({
+    if (userExists) {
+      res.status(400).send({
+        status: false,
+        message: "Email already exists in the database",
+      });
+    }
+
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    await User.create({
+      name: name,
+      email: email,
+      password: hashedPassword,
+      phoneNumber: phoneNumber,
+    });
+
+    const token = jwt.sign(
+      {
+        name: userExists.name,
+        email: userExists.email,
+      },
+      process.env.JWT_TOKEN
+    );
+
+    res.status(200).send({
+      status: true,
+      message: "User successfully signed in",
+      token: token,
+    });
+  } catch (err) {
+    res.status(500).send({
       status: false,
-      message: "Fields cannot be empty",
+      error: "Internal server error",
     });
   }
-
-  const emailExists = await User.exists({ email: email });
-  if (emailExists) {
-    return res.status(400).send({
-      status: false,
-      message: "This user already exists",
-    });
-  }
-
-  if (!nameRegex.test(name)) {
-    return res.status(400).send({
-      status: false,
-      message: "Please provide the name in correct format",
-    });
-  }
-
-  if (!emailRegex.test(email)) {
-    return res.status(400).send({
-      status: false,
-      message: "Please provide the email in correct format",
-    });
-  }
-
-  const hashedPassword = await bcrypt.hash(password, 10);
-
-  const newUser = await User.create({
-    name: name,
-    password: hashedPassword,
-    phoneNumber: phoneNumber,
-    email: email,
-  });
-
-  const token = jwt.sign({ email: newUser.email }, process.env.JWT_TOKEN);
-
-  return res.status(200).send({
-    status: true,
-    message: "User signed up successfully",
-    token: token,
-    user: newUser,
-  });
 };

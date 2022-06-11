@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import axios from "axios";
 import Button from "../../components/button/button.component";
 import Navbar from "../../components/navbar/navbar.component";
-import "./authpage.css";
+import "./signuppage.css";
 
-const Authpage = () => {
+const Signuppage = () => {
   const nameRegex =
     // eslint-disable-next-line
     /^[a-zA-Z\-]+$/;
@@ -52,10 +51,10 @@ const Authpage = () => {
 
       // console.log(user);
 
-      axios
-        .post("http://localhost:8000/auth/signup", user)
-        .then((res) => console.log(res.data))
-        .catch((error) => console.log("Error: ", error));
+      //   axios
+      //     .post("http://localhost:8000/auth/signup", user)
+      //     .then((res) => console.log(res.data))
+      //     .catch((error) => console.log("Error: ", error));
 
       setName("");
       setEmail("");
@@ -103,16 +102,9 @@ const Authpage = () => {
             <Button authSubmit>Sign Up</Button>
           </form>
         </div>
-        <div className="login">
-          <div className="title">Already a user?</div>
-          <p>Welcome back!</p>
-          <input type="email" placeholder="Email" required />
-          <input type="password" placeholder="Password" required />
-          <Button authSubmit>Log In</Button>
-        </div>
       </div>
     </div>
   );
 };
 
-export default Authpage;
+export default Signuppage;

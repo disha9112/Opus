@@ -19,11 +19,11 @@ const Navbar = () => {
         </label>
       </div>
       <div className="nav-links">
-        <Link className="btn-link" to="/auth">
-          <li>Login</li>
+        <Link className="btn-link" to="/signup">
+          <li>Sign Up</li>
         </Link>
-        <Link className="btn-link" to="/contact">
-          <li>Contact</li>
+        <Link className="btn-link" to="/login">
+          <li>Log In</li>
         </Link>
       </div>
     </nav>

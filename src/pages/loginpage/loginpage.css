@@ -1,0 +1,62 @@
+.container-auth {
+  text-align: center;
+  padding: 20px;
+  margin-top: 70px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+.login .title {
+  font-size: 2.5em;
+  font-weight: 900;
+  color: #5aba89;
+}
+
+.login p {
+  font-size: 1.5em;
+}
+
+.login {
+  padding: 20px;
+}
+
+.login input {
+  font-size: 1.2em;
+  width: 75%;
+  padding: 8px;
+  margin: 18px 0px;
+  border: 1px solid #dddddd;
+}
+
+.login input:focus {
+  outline: none;
+}
+
+@media all and (max-width: 750px) {
+  .container-auth {
+    display: block;
+  }
+
+  .login {
+    padding: 50px;
+  }
+}
+
+@media all and (max-width: 450px) {
+  .login {
+    padding: 30px;
+  }
+
+  .login .title {
+    font-size: 2em;
+    font-weight: 900;
+  }
+
+  .login input {
+    font-size: 1.2em;
+    width: 90%;
+    padding: 8px;
+    margin: 8px 0px;
+    border: 1px solid #dddddd;
+  }
+}

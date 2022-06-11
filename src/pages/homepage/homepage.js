@@ -16,7 +16,7 @@ const Homepage = () => {
       <div className="container">
         <div className="tagline">
           <div>Bring to life your ideas, and enhance your work efficiency.</div>
-          <Link className="btn-link" to="/auth">
+          <Link className="btn-link" to="/signup">
             <Button getStarted>Get started today.</Button>
           </Link>
         </div>

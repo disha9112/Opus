@@ -1,38 +1,40 @@
 const express = require("express");
+const jwt = require("jsonwebtoken");
+const bcrypt = require("bcrypt");
 const User = require("../../models/userModel");
 
 exports.login = async (req, res) => {
-  const password = req.body.password;
   const email = req.body.email;
+  const password = req.body.password;
 
-  if (!password || !email) {
-    return res.status(400).send({
-      status: false,
-      message: "Fields cannot be empty",
-    });
-  }
+  const userExists = await User.exists({ email: email });
 
-  const userEmailExists = await User.exists({ email: email });
-
-  if (!userEmailExists) {
+  if (!userExists) {
     return res.status(400).send({
       status: false,
       message: "This email does not exist in the database",
     });
   }
 
-  const emailRegex =
-    /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+  const isPasswordValid = await bcrypt.compare(password, userExists.password);
 
-  if (!emailRegex.test(email)) {
+  if (isPasswordValid) {
+    const token = jwt.sign(
+      {
+        name: userExists.name,
+        email: userExists.email,
+      },
+      process.env.JWT_TOKEN
+    );
+
+    return res.status(200).send({
+      status: true,
+      userExists: token,
+    });
+  } else {
     return res.status(400).send({
       status: false,
-      message: "Please provide the email in correct format",
+      message: "Validation error",
     });
   }
-
-  return res.status(200).send({
-    status: true,
-    message: "User logged in",
-  });
 };

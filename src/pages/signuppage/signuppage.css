@@ -4,32 +4,23 @@
   margin-top: 70px;
   box-sizing: border-box;
   background-color: #ffffff;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
 }
 
-.title {
+.signup .title {
   font-size: 2.5em;
   font-weight: 900;
-}
-
-.signup .title,
-.login .title {
   color: #5aba89;
 }
 
-.signup p,
-.login p {
+.signup p {
   font-size: 1.5em;
 }
 
-.signup,
-.login {
+.signup {
   padding: 20px;
 }
 
-.signup input,
-.login input {
+.signup input {
   font-size: 1.2em;
   width: 75%;
   padding: 8px;
@@ -37,8 +28,7 @@
   border: 1px solid #dddddd;
 }
 
-.signup input:focus,
-.login input:focus {
+.signup input:focus {
   outline: none;
 }
 
@@ -47,25 +37,22 @@
     display: block;
   }
 
-  .signup,
-  .login {
+  .signup {
     padding: 50px;
   }
 }
 
 @media all and (max-width: 450px) {
-  .signup,
-  .login {
+  .signup {
     padding: 30px;
   }
 
-  .title {
+  .signup .title {
     font-size: 2em;
     font-weight: 900;
   }
 
-  .signup input,
-  .login input {
+  .signup input {
     font-size: 1.2em;
     width: 90%;
     padding: 8px;
