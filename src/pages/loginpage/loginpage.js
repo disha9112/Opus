@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import login from "../../assets/login.png";
 import Button from "../../components/button/button.component";
 import Navbar from "../../components/navbar/navbar.component";
 import "./loginpage.css";
@@ -55,6 +56,7 @@ const Loginpage = () => {
     <div>
       <Navbar />
       <div className="container-auth">
+        <img src={login} alt="login" />
         <div className="login">
           <div className="title">Already a user?</div>
           <p>Welcome back!</p>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import signup from "../../assets/signup.png";
 import Button from "../../components/button/button.component";
 import Navbar from "../../components/navbar/navbar.component";
 import "./signuppage.css";
@@ -59,6 +60,7 @@ function Signuppage() {
     <div>
       <Navbar />
       <div className="container-auth">
+        <img src={signup} alt="signup" />
         <div className="signup">
           <div className="title">New to Opus?</div>
           <p>Sign up and unlock the magic!</p>

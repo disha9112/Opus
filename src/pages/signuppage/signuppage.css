@@ -1,9 +1,18 @@
 .container-auth {
+  overflow: hidden;
   text-align: center;
   padding: 20px;
   margin-top: 70px;
   box-sizing: border-box;
   background-color: #ffffff;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.container-auth img {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 500px;
 }
 
 .signup .title {
@@ -32,9 +41,19 @@
   outline: none;
 }
 
+@media all and (max-width: 920px) {
+  .container-auth img {
+    width: 400px;
+  }
+}
+
 @media all and (max-width: 750px) {
   .container-auth {
     display: block;
+  }
+
+  .container-auth img {
+    display: none;
   }
 
   .signup {
