@@ -1,7 +1,6 @@
 const express = require("express");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
-
 const User = require("../../models/userModel");
 
 exports.signup = async (req, res) => {
@@ -16,30 +15,31 @@ exports.signup = async (req, res) => {
       res.json({
         status: false,
         message: "Email already exists in the database",
+        userExists: userExists,
       });
-    }
+    } else {
+      const hashedPassword = await bcrypt.hash(password, 10);
 
-    const hashedPassword = await bcrypt.hash(password, 10);
-
-    await User.create({
-      name: name,
-      email: email,
-      password: hashedPassword,
-    });
-
-    const token = jwt.sign(
-      {
+      await User.create({
         name: name,
         email: email,
-      },
-      process.env.JWT_TOKEN
-    );
+        password: hashedPassword,
+      });
 
-    res.json({
-      status: true,
-      message: "User successfully signed in",
-      token: token,
-    });
+      const token = jwt.sign(
+        {
+          name: name,
+          email: email,
+        },
+        process.env.JWT_TOKEN
+      );
+
+      res.json({
+        status: true,
+        message: "User successfully signed in",
+        token: token,
+      });
+    }
   } catch (err) {
     res.json({
       status: false,

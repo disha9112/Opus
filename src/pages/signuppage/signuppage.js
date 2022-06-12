@@ -40,12 +40,18 @@ function Signuppage() {
 
     const data = await response.json();
 
-    if (data.token) {
-      localStorage.setItem("token", data.token);
-      // window.location.href = "/profile";
-      navigate("/profile");
+    if (data.userExists) {
+      alert(
+        "Given credentials exist in database already, please try logging in"
+      );
     } else {
-      alert("Please check the data you've entered");
+      if (data.token) {
+        localStorage.setItem("token", data.token);
+        // window.location.href = "/profile";
+        navigate("/profile");
+      } else {
+        alert("Please check the data entered");
+      }
     }
   }
 
