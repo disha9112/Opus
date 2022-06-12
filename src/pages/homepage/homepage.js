@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import image from "../../assets/homepage.png";
 import clock from "../../assets/clock.png";
@@ -10,6 +11,14 @@ import Footer from "../../components/footer/footer.component";
 import Button from "../../components/button/button.component";
 
 const Homepage = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (localStorage.getItem("token")) {
+      navigate("/profile");
+    }
+  });
+
   return (
     <div>
       <Navbar />

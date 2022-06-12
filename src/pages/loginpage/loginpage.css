@@ -4,6 +4,8 @@
   margin-top: 70px;
   box-sizing: border-box;
   background-color: #ffffff;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .login .title {

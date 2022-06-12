@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/navbar/navbar.component";
 import Pomodoro from "../../components/pomodoro/pomodoro.component";
 import Settings from "../../components/settings/settings.component";
@@ -8,6 +9,14 @@ import "./timerpage.css";
 const Timerpage = () => {
   const [workMinutes, setWorkMinutes] = useState(25);
   const [breakMinutes, setBreakMinutes] = useState(5);
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!localStorage.getItem("token")) {
+      navigate("/");
+    }
+  });
 
   return (
     <div>
