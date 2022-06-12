@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./navbar.styles.css";
 
-const Navbar = () => {
+function Navbar() {
   return (
     <nav>
       <input type="checkbox" id="nav-check"></input>
@@ -28,6 +28,6 @@ const Navbar = () => {
       </div>
     </nav>
   );
-};
+}
 
 export default Navbar;
