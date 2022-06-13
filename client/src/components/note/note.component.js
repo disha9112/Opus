@@ -3,21 +3,37 @@ import moment from "moment";
 import { FaTrash, FaEdit } from "react-icons/fa";
 import "./note.styles.css";
 
-const Note = ({ id, date, title, description }) => {
+function Note({ id, date, title, description }) {
+  async function handleNoteDelete() {
+    const response = await fetch(
+      "http://localhost:8000/notes/deleteNote/" + id,
+      {
+        method: "DELETE",
+      }
+    );
+
+    const data = await response.json();
+
+    if (data.status === true) {
+      alert("Note deleted successfully");
+      window.location.reload();
+    } else {
+      alert("Error deleting note");
+    }
+  }
+
   return (
     <div className="note-container">
-      <div
-        className="main-note-container"
-        style={{
-          overflowY: "scroll",
-          height: "250px",
-        }}
-      >
+      <div className="main-note-container">
         <div>
           <div className="note-header">
             <div className="note-date">{moment(date).fromNow()}</div>
             <div className="buttons">
-              <FaTrash className="btn-trash" size={28} />
+              <FaTrash
+                onClick={() => handleNoteDelete()}
+                className="btn-trash"
+                size={28}
+              />
               <FaEdit className="btn-edit" size={30} />
             </div>
           </div>
@@ -29,6 +45,6 @@ const Note = ({ id, date, title, description }) => {
       </div>
     </div>
   );
-};
+}
 
 export default Note;

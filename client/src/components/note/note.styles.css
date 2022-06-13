@@ -6,6 +6,8 @@
   padding: 20px;
   border-radius: 10px;
   background-color: #e1f396;
+  overflow-y: scroll;
+  height: 250px;
 }
 
 .main-note-container:hover {
