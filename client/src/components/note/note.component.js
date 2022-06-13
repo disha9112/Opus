@@ -1,8 +1,9 @@
 import React from "react";
+import moment from "moment";
 import { FaTrash, FaEdit } from "react-icons/fa";
 import "./note.styles.css";
 
-const Note = () => {
+const Note = ({ id, date, title, description }) => {
   return (
     <div className="note-container">
       <div
@@ -14,19 +15,15 @@ const Note = () => {
       >
         <div>
           <div className="note-header">
-            <div className="note-date">date</div>
+            <div className="note-date">{moment(date).fromNow()}</div>
             <div className="buttons">
               <FaTrash className="btn-trash" size={28} />
               <FaEdit className="btn-edit" size={30} />
             </div>
           </div>
           <div className="note-footer">
-            <div className="note-title">title</div>
-            <div className="note-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-              luctus aliquam diam a auctor. Nullam fringilla nibh quam, ac
-              congue quam porta a. Mauris ultrices interdum pellentesque.
-            </div>
+            <div className="note-title">{title}</div>
+            <div className="note-description">{description}</div>
           </div>
         </div>
       </div>

@@ -36,6 +36,8 @@ const NoteForm = () => {
     } else {
       alert("There was an error, kindly try again");
     }
+
+    window.location.reload();
   }
 
   return (
