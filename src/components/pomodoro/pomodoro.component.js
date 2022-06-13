@@ -76,7 +76,7 @@ const Pomodoro = () => {
           value={percentage}
           text={displayMinutes + ":" + displaySeconds}
           styles={buildStyles({
-            pathColor: mode === "break" ? "#5aba89" : "red",
+            pathColor: mode === "break" ? "#5aba89" : "#00575c",
             textColor: "#000000",
             trailColor: "#e1f396",
           })}
