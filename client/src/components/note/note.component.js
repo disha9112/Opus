@@ -10,7 +10,7 @@ const Note = ({ id, date, title, description }) => {
         className="main-note-container"
         style={{
           overflowY: "scroll",
-          height: "300px",
+          height: "250px",
         }}
       >
         <div>
