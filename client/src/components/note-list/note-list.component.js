@@ -6,10 +6,6 @@ const NoteList = () => {
   return (
     <div className="note-list-container">
       <Note />
-      <Note />
-      <Note />
-      <Note />
-      <Note />
     </div>
   );
 };

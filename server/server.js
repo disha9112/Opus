@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const auth = require("./routes/auth");
+const notes = require("./routes/notes");
 
 require("dotenv").config();
 
@@ -19,6 +20,7 @@ connection.once("open", () => {
 app.use(express.json());
 app.use(cors());
 app.use("/auth", auth);
+app.use("/notes", notes);
 
 app.get("/", (req, res) => {
   res.send("This is Opus!");

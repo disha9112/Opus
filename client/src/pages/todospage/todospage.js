@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/navbar/navbar.component";
 import TodoForm from "../../components/todo-form/todo-form.component";
-import Todo from "../../components/todo/todo.component";
+import TodoList from "../../components/todo-list/todo-list.component";
 import "./todospage.css";
 
 function Todospage() {
@@ -19,7 +19,7 @@ function Todospage() {
       <div className="container-todos">
         <div className="todos-title">What's on the tasklist today?</div>
         <TodoForm />
-        <Todo />
+        <TodoList />
       </div>
     </div>
   );
