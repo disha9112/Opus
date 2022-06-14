@@ -33,7 +33,7 @@ const Notespage = () => {
     } else {
       handleGetNotes();
     }
-  }, [notes]);
+  }, []);
 
   const returnedNotes = notes.map((note) => {
     return note;
@@ -43,8 +43,8 @@ const Notespage = () => {
     <div>
       <Navbar />
       <div className="main-notespage-container">
-        <NoteForm />
-        <NoteList notes={returnedNotes} />
+        <NoteForm stateChangerForm={handleGetNotes} />
+        <NoteList stateChangerNote={handleGetNotes} notes={returnedNotes} />
       </div>
     </div>
   );

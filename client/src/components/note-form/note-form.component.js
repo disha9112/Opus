@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Button from "../../components/button/button.component";
 import "./note-form.styles.css";
 
-const NoteForm = () => {
+const NoteForm = ({ stateChangerForm }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
@@ -33,11 +33,10 @@ const NoteForm = () => {
 
     if (data.status === true) {
       alert("Note created successfully");
+      stateChangerForm();
     } else {
       alert("There was an error, kindly try again");
     }
-
-    window.location.reload();
   }
 
   return (

@@ -3,7 +3,7 @@ import moment from "moment";
 import { FaTrash, FaEdit } from "react-icons/fa";
 import "./note.styles.css";
 
-function Note({ id, date, title, description }) {
+function Note({ id, date, title, description, stateChangerNote }) {
   async function handleNoteDelete() {
     const response = await fetch(
       "http://localhost:8000/notes/deleteNote/" + id,
@@ -16,7 +16,7 @@ function Note({ id, date, title, description }) {
 
     if (data.status === true) {
       alert("Note deleted successfully");
-      window.location.reload();
+      stateChangerNote();
     } else {
       alert("Error deleting note");
     }

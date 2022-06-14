@@ -2,7 +2,7 @@ import React from "react";
 import "./note-list.styles.css";
 import Note from "../note/note.component";
 
-const NoteList = ({ notes }) => {
+const NoteList = ({ notes, stateChangerNote }) => {
   if (!notes.length) {
     return <h4 style={{ textAlign: "center" }}>Loading...</h4>;
   } else {
@@ -16,6 +16,7 @@ const NoteList = ({ notes }) => {
               date={notes[i].date}
               title={notes[i].title}
               description={notes[i].description}
+              stateChangerNote={stateChangerNote}
             />
           );
         })}
