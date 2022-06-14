@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import logo from "../../assets/logo.png";
 import { Link } from "react-router-dom";
 import "./navbar.styles.css";
 
@@ -22,6 +23,7 @@ function Navbar() {
         <div className="nav-header">
           <Link to="/">
             <div className="nav-title">Opus</div>
+            <img className="nav-header-img" src={logo} width="30" />
           </Link>
         </div>
         <div className="nav-btn">

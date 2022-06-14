@@ -22,6 +22,10 @@ nav {
   padding: 10px 10px 10px 10px;
 }
 
+.nav-header-img {
+  width: 30px;
+}
+
 .nav-btn {
   display: none;
 }
@@ -91,5 +95,15 @@ li:hover {
   #nav-check:checked ~ .nav-links {
     height: calc(100vh - 50px);
     overflow-y: hidden;
+  }
+  .nav-header img {
+    width: 30px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 615px) {
+  .nav-header-img {
+    width: 30px;
   }
 }
