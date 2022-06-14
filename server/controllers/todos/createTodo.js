@@ -13,7 +13,7 @@ exports.createTodo = async (req, res) => {
   const description = req.body.description;
 
   try {
-    const newTodo = new Todo({ email, title, description });
+    const newTodo = new Todo({ email, description });
 
     try {
       await newTodo.save();

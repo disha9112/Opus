@@ -23,7 +23,7 @@ const Notespage = () => {
     if (data.status === true) {
       setNotes(data.notes);
     } else {
-      alert("Error retrieving posts");
+      alert("Error retrieving notes");
     }
   }
 

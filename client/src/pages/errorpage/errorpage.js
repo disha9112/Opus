@@ -16,7 +16,11 @@ const Errorpage = () => {
             Luckily, that doesn't put a full stop to your work!
           </div>
           <Link className="btn-link" to="/">
-            <Button getStarted>Back to Home</Button>
+            <Button getStarted>
+              {localStorage.getItem("token")
+                ? `Back to Profile`
+                : `Back to Home`}
+            </Button>
           </Link>
         </div>
       </div>

@@ -3,6 +3,12 @@
   justify-content: center;
 }
 
+.container-todoform button {
+  background: none;
+  outline: none;
+  border: none;
+}
+
 .todo-image {
   width: 300px;
 }

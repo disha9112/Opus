@@ -34,6 +34,8 @@ const NoteForm = ({ stateChangerForm }) => {
     if (data.status === true) {
       alert("Note created successfully");
       stateChangerForm();
+      setTitle("");
+      setDescription("");
     } else {
       alert("There was an error, kindly try again");
     }
