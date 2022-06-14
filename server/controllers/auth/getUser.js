@@ -11,7 +11,7 @@ exports.getUser = async (req, res) => {
   if (userExists) {
     return res.json({
       status: true,
-      message: "Validation successful",
+      message: "User retrieval from database successful",
       name: userExists.name,
     });
   } else {
