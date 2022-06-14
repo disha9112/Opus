@@ -21,6 +21,11 @@
   color: red;
 }
 
+.todo-buttons .btn-edit-todo:hover {
+  cursor: pointer;
+  color: #00575c;
+}
+
 @media all and (max-width: 450px) {
   .todo-content {
     font-size: 0.5em;

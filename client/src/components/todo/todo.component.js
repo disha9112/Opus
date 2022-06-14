@@ -1,5 +1,5 @@
 import React from "react";
-import { FaTrash } from "react-icons/fa";
+import { FaTrash, FaEdit } from "react-icons/fa";
 import "./todo.styles.css";
 
 function Todo({ id, description, stateChangerTodoList }) {
@@ -31,6 +31,7 @@ function Todo({ id, description, stateChangerTodoList }) {
             className="btn-trash"
             size={28}
           />
+          <FaEdit className="btn-edit-todo" size={30} />
         </div>
       </div>
     </div>

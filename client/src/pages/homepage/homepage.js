@@ -26,7 +26,7 @@ const Homepage = () => {
         <div className="tagline">
           <div>Bring to life your ideas, and enhance your work efficiency.</div>
           <Link className="btn-link" to="/signup">
-            <Button getStarted>Get started today</Button>
+            <Button getStarted>Get started today.</Button>
           </Link>
         </div>
         <div className="content">
