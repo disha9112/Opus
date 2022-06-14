@@ -4,7 +4,7 @@ const bcrypt = require("bcrypt");
 const mongoose = require("mongoose");
 const Todo = require("../../models/todoModel");
 
-exports.updateNote = async (req, res) => {
+exports.updateTodo = async (req, res) => {
   const id = req.params.id;
   const description = req.body.description;
 
@@ -15,6 +15,8 @@ exports.updateNote = async (req, res) => {
         message: "No such todo with this id",
       });
     } else {
+      P;
+
       try {
         const updatedTodo = { _id: id, description: description };
 

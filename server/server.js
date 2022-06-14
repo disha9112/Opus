@@ -3,6 +3,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const auth = require("./routes/auth");
 const notes = require("./routes/notes");
+const todos = require("./routes/todos");
 
 require("dotenv").config();
 
@@ -19,8 +20,10 @@ connection.once("open", () => {
 
 app.use(express.json());
 app.use(cors());
+
 app.use("/auth", auth);
 app.use("/notes", notes);
+app.use("/todos", todos);
 
 app.get("/", (req, res) => {
   res.send("This is Opus!");

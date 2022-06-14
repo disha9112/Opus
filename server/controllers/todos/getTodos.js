@@ -3,7 +3,7 @@ const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 const Todo = require("../../models/todoModel");
 
-exports.getNotes = async (req, res) => {
+exports.getTodos = async (req, res) => {
   const userEmail = jwt.verify(
     req.headers.authorization,
     process.env.JWT_TOKEN
