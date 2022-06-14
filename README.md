@@ -14,7 +14,7 @@
 
 </br>
 
-![Opus](https://user-images.githubusercontent.com/78133928/173604871-4d3038ad-0954-426c-9797-7bad1b94f88b.png)
+![Opus](https://user-images.githubusercontent.com/78133928/173618111-5a3c17f4-c606-41f2-955f-9901ad889061.png)
 
 <!-- HOSTED LINK -->
 
