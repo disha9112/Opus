@@ -28,7 +28,7 @@ https://github.com/disha9112/Opus/
 
 In today's fast-paced world where being quick on your toes has become pivotal to various aspects of life, Opus is a website aimed at improving the organizing abilities and work efficiency of its users.
 
-The website provides a one-stop solution for users to enhance their productivity by jotting down their tasks and notes, and use a timer to break work durations into short yet effective time periods for the best results.
+The website provides a one-stop solution for users to enhance their productivity by jotting down their tasks and notes, and using a timer to break down work durations into short yet effective time periods for the best results.
 
 <!-- FEATURES IMPLEMENTED -->
 
@@ -36,11 +36,11 @@ The website provides a one-stop solution for users to enhance their productivity
 
 ## Frontend
 
-- Users can create an account and access the features available.
+- Users can create an account to access the features available.
 - The notes page can be used to jot down quick notes by providing an apt title and description. Users can update and delete their notes as well.
 - The todos page is helpful in maintaining tasks or one-liners, and these can be updated and deleted as per the user's convenience.
-- A Pomodoro timer is available for the user to manage time in short blocks. Timer settings can be used to set the desired work and break durations.
-- Randomized, inspiring quotes are generated on the profile page every time the user lands on it.
+- A Pomodoro timer is available for the users to manage time in small blocks. Timer settings can be used to set the desired work and break durations.
+- Randomized inspiring quotes are generated on the profile page every time the user lands on it.
 
 ## Backend
 
