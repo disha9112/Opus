@@ -1,7 +1,7 @@
 <div id="top"></div>
 
 <div align="center">
-  <a href="https://github.com/disha9112/Opus/">
+  <a href="https://opus-live.netlify.app/">
     <img src="https://user-images.githubusercontent.com/78133928/173599867-44c5e4e9-3e40-4b05-b81d-fd26d4032c54.svg" alt="Logo" width="60" height="60">
   </a>
 
@@ -20,7 +20,7 @@
 
 ## Hosted Link
 
-https://github.com/disha9112/Opus/
+https://opus-live.netlify.app/
 
 <!-- ABOUT THE PROJECT -->
 
