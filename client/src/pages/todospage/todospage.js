@@ -11,12 +11,15 @@ function Todospage() {
   const [todos, setTodos] = useState([]);
 
   async function handleGetTodos() {
-    const response = await fetch("http://localhost:8000/todos/getTodos", {
-      method: "GET",
-      headers: {
-        Authorization: localStorage.getItem("token"),
-      },
-    });
+    const response = await fetch(
+      "https://opus-live.herokuapp.com/todos/getTodos",
+      {
+        method: "GET",
+        headers: {
+          Authorization: localStorage.getItem("token"),
+        },
+      }
+    );
 
     const data = await response.json();
 

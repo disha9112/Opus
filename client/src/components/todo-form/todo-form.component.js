@@ -13,16 +13,19 @@ const TodoForm = ({ stateChangerTodoForm }) => {
   async function handleTodoSubmit(event) {
     event.preventDefault();
 
-    const response = await fetch("http://localhost:8000/todos/createTodo", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: localStorage.getItem("token"),
-      },
-      body: JSON.stringify({
-        description,
-      }),
-    });
+    const response = await fetch(
+      "https://opus-live.herokuapp.com/todos/createTodo",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: localStorage.getItem("token"),
+        },
+        body: JSON.stringify({
+          description,
+        }),
+      }
+    );
 
     const data = await response.json();
 
@@ -37,7 +40,8 @@ const TodoForm = ({ stateChangerTodoForm }) => {
 
   async function handleTodoUpdateDetails() {
     const res = await fetch(
-      "http://localhost:8000/todos/getTodo/" + localStorage.getItem("todoId"),
+      "https://opus-live.herokuapp.com/todos/getTodo/" +
+        localStorage.getItem("todoId"),
       {
         method: "GET",
         headers: {
@@ -60,7 +64,7 @@ const TodoForm = ({ stateChangerTodoForm }) => {
     event.preventDefault();
 
     const response = await fetch(
-      "http://localhost:8000/todos/updateTodo/" +
+      "https://opus-live.herokuapp.com/todos/updateTodo/" +
         localStorage.getItem("todoId"),
       {
         method: "PUT",

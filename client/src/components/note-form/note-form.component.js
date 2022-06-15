@@ -17,17 +17,20 @@ const NoteForm = ({ stateChangerForm }) => {
   async function handleNoteSubmit(event) {
     event.preventDefault();
 
-    const response = await fetch("http://localhost:8000/notes/createNote", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: localStorage.getItem("token"),
-      },
-      body: JSON.stringify({
-        title,
-        description,
-      }),
-    });
+    const response = await fetch(
+      "https://opus-live.herokuapp.com/notes/createNote",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: localStorage.getItem("token"),
+        },
+        body: JSON.stringify({
+          title,
+          description,
+        }),
+      }
+    );
 
     const data = await response.json();
 
@@ -43,7 +46,8 @@ const NoteForm = ({ stateChangerForm }) => {
 
   async function handleUpdateDetails() {
     const res = await fetch(
-      "http://localhost:8000/notes/getNote/" + localStorage.getItem("noteId"),
+      "https://opus-live.herokuapp.com/notes/getNote/" +
+        localStorage.getItem("noteId"),
       {
         method: "GET",
         headers: {
@@ -67,7 +71,7 @@ const NoteForm = ({ stateChangerForm }) => {
     event.preventDefault();
 
     const response = await fetch(
-      "http://localhost:8000/notes/updateNote/" +
+      "https://opus-live.herokuapp.com/notes/updateNote/" +
         localStorage.getItem("noteId"),
       {
         method: "PUT",

@@ -10,7 +10,7 @@ function Todo({ id, description, stateChangerTodoList }) {
 
   async function handleTodoDelete() {
     const response = await fetch(
-      "http://localhost:8000/todos/deleteTodo/" + id,
+      "https://opus-live.herokuapp.com/todos/deleteTodo/" + id,
       {
         method: "DELETE",
       }

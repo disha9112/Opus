@@ -11,12 +11,15 @@ const Notespage = () => {
   const [notes, setNotes] = useState([]);
 
   async function handleGetNotes() {
-    const response = await fetch("http://localhost:8000/notes/getNotes", {
-      method: "GET",
-      headers: {
-        Authorization: localStorage.getItem("token"),
-      },
-    });
+    const response = await fetch(
+      "https://opus-live.herokuapp.com/notes/getNotes",
+      {
+        method: "GET",
+        headers: {
+          Authorization: localStorage.getItem("token"),
+        },
+      }
+    );
 
     const data = await response.json();
 

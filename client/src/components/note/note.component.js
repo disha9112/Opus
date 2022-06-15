@@ -11,7 +11,7 @@ function Note({ id, date, title, description, stateChangerNote }) {
 
   async function handleNoteDelete() {
     const response = await fetch(
-      "http://localhost:8000/notes/deleteNote/" + id,
+      "https://opus-live.herokuapp.com/notes/deleteNote/" + id,
       {
         method: "DELETE",
       }
