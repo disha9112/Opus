@@ -4,6 +4,11 @@ import { FaTrash, FaEdit } from "react-icons/fa";
 import "./note.styles.css";
 
 function Note({ id, date, title, description, stateChangerNote }) {
+  async function isUpdate() {
+    localStorage.setItem("noteId", id);
+    window.location.reload();
+  }
+
   async function handleNoteDelete() {
     const response = await fetch(
       "http://localhost:8000/notes/deleteNote/" + id,
@@ -34,7 +39,11 @@ function Note({ id, date, title, description, stateChangerNote }) {
                 className="btn-trash"
                 size={28}
               />
-              <FaEdit className="btn-edit" size={30} />
+              <FaEdit
+                className="btn-edit"
+                size={30}
+                onClick={() => isUpdate()}
+              />
             </div>
           </div>
           <div className="note-footer">
