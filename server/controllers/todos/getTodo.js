@@ -1,19 +1,18 @@
 const express = require("express");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
-const Note = require("../../models/noteModel");
+const Todo = require("../../models/todoModel");
 
-exports.getNote = async (req, res) => {
+exports.getTodo = async (req, res) => {
   const id = req.params.id;
 
   try {
-    const note = await Note.findOne({ _id: id });
+    const todo = await Todo.findOne({ _id: id });
 
     res.json({
       status: true,
-      message: "Note retrieved succesfully",
-      title: note.title,
-      description: note.description,
+      message: "Todo retrieved succesfully",
+      description: todo.description,
     });
   } catch (error) {
     res.json({

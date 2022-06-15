@@ -3,6 +3,11 @@ import { FaTrash, FaEdit } from "react-icons/fa";
 import "./todo.styles.css";
 
 function Todo({ id, description, stateChangerTodoList }) {
+  async function isUpdateTodo() {
+    localStorage.setItem("todoId", id);
+    window.location.reload();
+  }
+
   async function handleTodoDelete() {
     const response = await fetch(
       "http://localhost:8000/todos/deleteTodo/" + id,
@@ -31,7 +36,11 @@ function Todo({ id, description, stateChangerTodoList }) {
             className="btn-trash"
             size={28}
           />
-          <FaEdit className="btn-edit-todo" size={30} />
+          <FaEdit
+            className="btn-edit-todo"
+            size={30}
+            onClick={() => isUpdateTodo()}
+          />
         </div>
       </div>
     </div>

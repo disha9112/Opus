@@ -43,7 +43,11 @@ function Todospage() {
     <div>
       <Navbar />
       <div className="container-todos">
-        <div className="todos-title">What's on the tasklist today?</div>
+        <div className="todos-title">
+          {localStorage.getItem("todoId")
+            ? `Edit a todo`
+            : `What's on the tasklist today?`}
+        </div>
         <TodoForm stateChangerTodoForm={handleGetTodos} />
         <TodoList stateChangerTodoList={handleGetTodos} todos={returnedTodos} />
       </div>

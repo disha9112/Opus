@@ -15,8 +15,6 @@ exports.updateTodo = async (req, res) => {
         message: "No such todo with this id",
       });
     } else {
-      P;
-
       try {
         const updatedTodo = { _id: id, description: description };
 
