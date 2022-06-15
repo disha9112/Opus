@@ -26,9 +26,7 @@ https://github.com/disha9112/Opus/
 
 # About
 
-In today's fast-paced world where being quick on your toes has become pivotal to various aspects of life, Opus is a website aimed at improving the organizing abilities and work efficiency of its users.
-
-The website provides a one-stop solution for users to enhance their productivity by jotting down their tasks and notes, and using a timer to break down work durations into short yet effective time periods for the best results.
+Opus is a productivity website, built using the MERN stack. It provides a one-stop solution for users to enhance their organizing capabilties by jotting down their tasks and notes, and using a timer to break down work durations into short yet effective time periods for the best results.
 
 <!-- FEATURES IMPLEMENTED -->
 
@@ -62,6 +60,8 @@ The website provides a one-stop solution for users to enhance their productivity
     - Creates and adds a note to the database.
   - /getNotes
     - Fetches all the notes of the currently logged in user.
+  - /getNote
+    - Fetches a particular note.
   - /updateNote
     - Updates a note in the database.
   - /deleteNote
@@ -72,6 +72,8 @@ The website provides a one-stop solution for users to enhance their productivity
     - Creates and adds a todo to the database.
   - /getTodos
     - Fetches all the todos of the currently logged in user.
+  - /getTodo
+    - Fetches a particular todo.
   - /updateTodo
     - Updates a todo in the database.
   - /deleteTodo
