@@ -102,16 +102,17 @@ git clone https://github.com/disha9112/Opus.git
 ```
 
 3. Open the folder containing the cloned repository in the terminal
-4. Install the npm packages and libraries
+4. Navigate to the server folder in a new terminal and  install the npm packages and libraries
 
 ```sh
+cd server
 npm install
 ```
 
 5. Set up a .env file (check the .example.env file) with custom keys and run the server
 
 ```sh
-npm start
+npm run dev
 ```
 
 6. Navigate to the client folder in a new terminal and install the packages and libraries
