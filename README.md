@@ -1,7 +1,7 @@
 <div id="top"></div>
 
 <div align="center">
-  <a href="https://github.com/disha9112/Opus/">
+  <a href="https://opus-live.netlify.app/">
     <img src="https://user-images.githubusercontent.com/78133928/173599867-44c5e4e9-3e40-4b05-b81d-fd26d4032c54.svg" alt="Logo" width="60" height="60">
   </a>
 
@@ -20,15 +20,13 @@
 
 ## Hosted Link
 
-https://github.com/disha9112/Opus/
+https://opus-live.netlify.app/
 
 <!-- ABOUT THE PROJECT -->
 
 # About
 
-In today's fast-paced world where being quick on your toes has become pivotal to various aspects of life, Opus is a website aimed at improving the organizing abilities and work efficiency of its users.
-
-The website provides a one-stop solution for users to enhance their productivity by jotting down their tasks and notes, and using a timer to break down work durations into short yet effective time periods for the best results.
+Opus is a productivity website, built using the MERN stack. It provides a one-stop solution for users to enhance their organizing capabilties by jotting down their tasks and notes, and using a timer to break down work durations into short yet effective time periods for the best results.
 
 <!-- FEATURES IMPLEMENTED -->
 
@@ -62,6 +60,8 @@ The website provides a one-stop solution for users to enhance their productivity
     - Creates and adds a note to the database.
   - /getNotes
     - Fetches all the notes of the currently logged in user.
+  - /getNote
+    - Fetches a particular note.
   - /updateNote
     - Updates a note in the database.
   - /deleteNote
@@ -72,6 +72,8 @@ The website provides a one-stop solution for users to enhance their productivity
     - Creates and adds a todo to the database.
   - /getTodos
     - Fetches all the todos of the currently logged in user.
+  - /getTodo
+    - Fetches a particular todo.
   - /updateTodo
     - Updates a todo in the database.
   - /deleteTodo
@@ -100,16 +102,17 @@ git clone https://github.com/disha9112/Opus.git
 ```
 
 3. Open the folder containing the cloned repository in the terminal
-4. Install the npm packages and libraries
+4. Navigate to the server folder in a new terminal and  install the npm packages and libraries
 
 ```sh
+cd server
 npm install
 ```
 
 5. Set up a .env file (check the .example.env file) with custom keys and run the server
 
 ```sh
-npm start
+npm run dev
 ```
 
 6. Navigate to the client folder in a new terminal and install the packages and libraries
