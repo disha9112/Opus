@@ -8,6 +8,7 @@ import Homepage from "./pages/homepage/homepage";
 import Notespage from "./pages/notespage/notespage";
 import Todospage from "./pages/todospage/todospage";
 import Timerpage from "./pages/timerpage/timerpage";
+import Eventspage from "./pages/eventspage/eventspage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/signup" element={<Signuppage />} />
         <Route path="/login" element={<Loginpage />} />
         <Route path="/profile" element={<Profilepage />} />
+        <Route path="/events" element={<Eventspage />} />
         <Route path="/pomodoro" element={<Timerpage />} />
         <Route path="/notes" element={<Notespage />} />
         <Route path="/todos" element={<Todospage />} />

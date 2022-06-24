@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const auth = require("./routes/auth");
 const notes = require("./routes/notes");
 const todos = require("./routes/todos");
+const events = require("./routes/events");
 
 require("dotenv").config();
 
@@ -24,6 +25,7 @@ app.use(cors());
 app.use("/auth", auth);
 app.use("/notes", notes);
 app.use("/todos", todos);
+app.use("/events", events);
 
 app.get("/", (req, res) => {
   res.send("This is Opus!");

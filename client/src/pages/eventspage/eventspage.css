@@ -1,0 +1,25 @@
+.eventspage {
+  text-align: center;
+  padding: 20px;
+}
+
+.eventspage-content {
+  text-align: center;
+  padding: 20px;
+  font-size: 2em;
+  font-weight: 900;
+}
+
+.container-date-picker,
+.container-time-picker {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media all and (max-width: 400px) {
+  .eventspage-content {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5em;
+  }
+}

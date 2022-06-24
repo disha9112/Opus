@@ -4,11 +4,19 @@ import Button from "../button/button.component";
 import pomodoro from "../../assets/pomodoro-card.png";
 import notes from "../../assets/notes-card.png";
 import todos from "../../assets/todos-card.png";
+import events from "../../assets/events-card.png";
+
 import "./profile-cards.styles.css";
 
 const ProfileCards = () => {
   return (
     <div className="cards-list">
+      <div className="event card">
+        <img src={events} alt="event card" />
+        <Link to="/events">
+          <Button authSubmit>Events</Button>
+        </Link>
+      </div>
       <div className="card pomodoro">
         <img src={pomodoro} alt="pomodoro card" />
         <Link to="/pomodoro">

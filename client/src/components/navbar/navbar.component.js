@@ -50,6 +50,7 @@ function Navbar() {
         <div className="nav-header">
           <Link to="/">
             <div className="nav-title">Opus</div>
+            <img className="nav-header-img" src={logo} width="30" />
           </Link>
         </div>
         <div className="nav-btn">
@@ -62,6 +63,9 @@ function Navbar() {
         <div className="nav-links">
           <Link className="btn-link" to="/profile">
             <li>Profile</li>
+          </Link>
+          <Link className="btn-link" to="/events">
+            <li>Events</li>
           </Link>
           <Link className="btn-link" to="/pomodoro">
             <li>Pomodoro</li>

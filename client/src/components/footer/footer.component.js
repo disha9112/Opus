@@ -15,7 +15,7 @@ const Footer = () => {
           <p className="footer-company-name">Opus All Rights Reserved © 2022</p>
 
           <div className="footer-icons">
-            <a href="https://github.com/">
+            <a href="https://github.com/disha9112">
               <FaGithub />
             </a>
             <a href="https://www.linkedin.com/in/disha9112/">
@@ -31,7 +31,7 @@ const Footer = () => {
           <Link className="footer-links" to="/">
             Home
           </Link>
-          <Link className="footer-links" to="/auth">
+          <Link className="footer-links" to="/login">
             Login
           </Link>
           <Link className="footer-links" to="/contact">
