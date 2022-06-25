@@ -16,6 +16,14 @@
   margin-bottom: auto;
 }
 
+.todo-content:hover {
+  cursor: pointer;
+}
+
+.striked {
+  text-decoration: line-through;
+}
+
 .todo-buttons .btn-trash:hover {
   cursor: pointer;
   color: red;

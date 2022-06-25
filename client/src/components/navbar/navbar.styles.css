@@ -5,9 +5,9 @@ nav {
   width: 100%;
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
-  /* background-color: #00575c; */
   position: fixed;
   top: 0;
+  z-index: 5;
 }
 
 .nav-header {

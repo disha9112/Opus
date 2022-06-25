@@ -6,10 +6,6 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 import "react-datepicker/dist/react-datepicker.css";
 import "./event-form.styles.css";
 
-const locales = {
-  "en-IN": require("date-fns/locale/en-IN"),
-};
-
 function EventsForm({ stateChangerEventForm }) {
   const [title, setTitle] = useState("");
   const [start, setStart] = useState("");
@@ -81,13 +77,13 @@ function EventsForm({ stateChangerEventForm }) {
             </div>
           </div>
           {/* <div className="container-time-picker">
-              <div>
-                <input type="text" placeholder="Start (HH:MM:SS)" />
-              </div>
-              <div>
-                <input type="text" placeholder="End (HH:MM:SS)" />
-              </div>
-            </div> */}
+            <div>
+              <input type="text" placeholder="Start (HH:MM:SS)" />
+            </div>
+            <div>
+              <input type="text" placeholder="End (HH:MM:SS)" />
+            </div>
+          </div> */}
           <Button authSubmit>Add Event</Button>
         </form>
       </div>

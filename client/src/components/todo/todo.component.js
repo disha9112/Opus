@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaTrash, FaEdit } from "react-icons/fa";
 import "./todo.styles.css";
 
 function Todo({ id, description, stateChangerTodoList }) {
+  const [completed, setCompleted] = useState(false);
+
   async function isUpdateTodo() {
     localStorage.setItem("todoId", id);
     window.location.reload();
@@ -26,10 +28,23 @@ function Todo({ id, description, stateChangerTodoList }) {
     }
   }
 
+  const handleTodoStatus = () => {
+    if (completed) {
+      setCompleted(false);
+    } else {
+      setCompleted(true);
+    }
+  };
+
   return (
     <div className="main-container-todo">
       <div className="container-todo">
-        <div className="todo-content">{description}</div>
+        <div
+          onClick={() => handleTodoStatus()}
+          className={`${completed ? "striked" : ""} todo-content`}
+        >
+          {description}
+        </div>
         <div className="todo-buttons">
           <FaTrash
             onClick={() => handleTodoDelete()}
