@@ -20,7 +20,7 @@
 
 ## Hosted Link
 
-https://opus-live.netlify.app/
+<a href="https://opus-live.netlify.app/" target="_blank">https://opus-live.netlify.app/</a>
 
 <!-- ABOUT THE PROJECT -->
 
@@ -55,13 +55,6 @@ Opus is a productivity website, built using the MERN stack. It provides a one-st
 
 2. API Routes
 
-- Events
-
-  - /createEvent
-    - Creates and adds an event to the database.
-  - /getEvents
-    - Fetches all the events of the currently logged in user.
-
 - Notes
 
   - /createNote
@@ -87,6 +80,13 @@ Opus is a productivity website, built using the MERN stack. It provides a one-st
     - Updates a todo in the database.
   - /deleteTodo
     - Deletes a todo from the database.
+
+- Events
+
+  - /createEvent
+    - Creates and adds an event to the database.
+  - /getEvents
+    - Fetches all the events of the currently logged in user.
 
 <!-- BUILT WITH -->
 
