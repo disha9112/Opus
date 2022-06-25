@@ -23,24 +23,6 @@ const localizer = dateFnsLocalizer({
   locales,
 });
 
-const events = [
-  {
-    title: "Big Meeting",
-    start: new Date(2022, 5, 24),
-    end: new Date(2022, 5, 24),
-  },
-  {
-    title: "Vacation",
-    start: new Date(2022, 5, 23),
-    end: new Date(2022, 5, 23),
-  },
-  {
-    title: "Conference",
-    start: new Date(2022, 5, 23),
-    end: new Date(2022, 5, 23),
-  },
-];
-
 function Eventspage() {
   const navigate = useNavigate();
 

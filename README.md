@@ -26,7 +26,7 @@ https://opus-live.netlify.app/
 
 # About
 
-Opus is a productivity website, built using the MERN stack. It provides a one-stop solution for users to enhance their organizing capabilties by jotting down their tasks and notes, and using a timer to break down work durations into short yet effective time periods for the best results.
+Opus is a productivity website, built using the MERN stack. It provides a one-stop solution for users to enhance their organizing capabilties by scheduling their upcoming events in calendars, jotting down their tasks and notes, and using a timer to break down work durations into short yet effective time periods for the best results.
 
 <!-- FEATURES IMPLEMENTED -->
 
@@ -35,6 +35,7 @@ Opus is a productivity website, built using the MERN stack. It provides a one-st
 ## Frontend
 
 - Users can create an account to access the features available.
+- The events page allows access to a calendar for marking important dates with events and other commitments.
 - The notes page can be used to jot down quick notes by providing an apt title and description. Users can update and delete their notes as well.
 - The todos page is helpful in maintaining tasks or one-liners, and these can be updated and deleted as per the user's convenience.
 - A Pomodoro timer is available for the users to manage time in small blocks. Timer settings can be used to set the desired work and break durations.
@@ -54,6 +55,13 @@ Opus is a productivity website, built using the MERN stack. It provides a one-st
 
 2. API Routes
 
+- Events
+
+  - /createEvent
+    - Creates and adds an event to the database.
+  - /getEvents
+    - Fetches all the events of the currently logged in user.
+
 - Notes
 
   - /createNote
@@ -68,6 +76,7 @@ Opus is a productivity website, built using the MERN stack. It provides a one-st
     - Deletes a note from the database.
 
 - Todos
+
   - /createTodo
     - Creates and adds a todo to the database.
   - /getTodos
@@ -102,7 +111,7 @@ git clone https://github.com/disha9112/Opus.git
 ```
 
 3. Open the folder containing the cloned repository in the terminal
-4. Navigate to the server folder in a new terminal and  install the npm packages and libraries
+4. Navigate to the server folder in a new terminal and install the npm packages and libraries
 
 ```sh
 cd server
